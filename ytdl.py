@@ -1,12 +1,13 @@
 import yt_dlp
 from datetime import datetime
 import sys
+import os
 
 date = datetime.now().strftime("%m-%d-%y")
-path_mp3 = "E:\\DOWNLOADS\\YTDL\\Mp3\\" + date
-path_mp4 = "E:\\DOWNLOADS\\YTDL\\Mp4\\" + date
+current_dir = os.getcwd()
+output_path = os.path.join(current_dir)
 
-def download_vid_to_mp3(url, output_path=path_mp3):
+def download_vid_to_mp3(url, output_path=output_path):
     options = {
         'format': 'bestaudio/best',
         'postprocessors': [
@@ -28,7 +29,7 @@ def download_vid_to_mp3(url, output_path=path_mp3):
     print("Download complete.")
 
 
-def download_vid_to_mp4(url, output_path=path_mp4):
+def download_vid_to_mp4(url, output_path=output_path):
     options = {
         'format': 'bestvideo+bestaudio/best',
         'postprocessors': [

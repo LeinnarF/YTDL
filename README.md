@@ -21,6 +21,8 @@ This is a simple YouTube downloader script that allows you to download videos as
 
 To use the downloader, you can run the ytdl.bat script from the command line
 
+The downloaded file will be placed on the folder you're currently on
+
 ### Download MP3
 
 To download a video as an MP3 file, use the `m` mode:
