@@ -1,9 +1,7 @@
 import yt_dlp
-from datetime import datetime
 import sys
 import os
 
-date = datetime.now().strftime("%m-%d-%y")
 current_dir = os.getcwd()
 output_path = os.path.join(current_dir)
 
